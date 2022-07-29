@@ -1,18 +1,18 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import PageNotFound from '../components/PageNotFound';
-import Delete from '../components/pages/employee/Delete';
 import Home from '../components/pages/employee/Home';
 import Register from '../components/pages/employee/Register';
 import Update from '../components/pages/employee/Update';
+import View from '../components/pages/employee/View';
 
 const routing = () => {
   return (
    <>
    <Route path='/' element={<Home />}/>
-   <Route path='/register' element={<Register />}/>
-   <Route path='/update' element={<Update />}/>
-   <Route path='/delete' element={<Delete />}/>
+   <Route path='/add' element={<Register />}/>
+   <Route path='/update/:id' element={<Update />}/>
+   <Route path='/view/:id' element={<View />}/>
    <Route path='*' element={<PageNotFound />}/>
    </>
   )
